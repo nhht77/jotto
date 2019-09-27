@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from "enzyme";
 
 import Congrats from './Congrats';
-import { findByTestAttr, checkProps } from '../test/testUtils';
+import { findComponentByTestAttr, checkProps } from '../test/testUtils';
 
 
 const defaultProps = {success: false}
@@ -13,19 +13,19 @@ const setup = (props={}) => {
 
 test('renders without errors', () => {
     const wrapper   = setup({success: false});
-    const component = findByTestAttr(wrapper, "congrats-msg") 
+    const component = findComponentByTestAttr(wrapper, "congrats-msg") 
     expect(component.length).toBe(1);
 })
 
 test(`renders no text when 'success' props is false`, () => {
     const wrapper   = setup({success: false});
-    const component = findByTestAttr(wrapper, "congrats-msg") 
+    const component = findComponentByTestAttr(wrapper, "congrats-msg") 
     expect(component.text()).toBe('');
 })
 
 test('renders non-empty congrats message when success prop is true', () => {
     const wrapper   = setup({success: true});
-    const component = findByTestAttr(wrapper, "congrats-msg");
+    const component = findComponentByTestAttr(wrapper, "congrats-msg");
     expect(component.text().length).not.toBe(0);
 })
 
