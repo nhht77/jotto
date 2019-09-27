@@ -7,7 +7,11 @@ import { findByTestAttr, checkProps } from '../test/testUtils';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
-const setup = (props={}) => shallow(<Congrats {...props} />)
+const defaultProps = {success: false}
+const setup = (props={}) => {
+    const setupProps = {...defaultProps, ...props};
+    return shallow(<Congrats {...setupProps} />)
+}
 
 test('renders without errors', () => {
     const wrapper   = setup({success: false});
