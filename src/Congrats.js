@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Congrats extends Component {
-    render() {
-        return (
-            <div/>
-        )
-    }
+const Congrats = (props) =>  {
+    return (
+        <div data-test="congrats-msg">
+        {
+            props.success 
+                ? 'Success'
+                : ''
+        }
+        </div>
+    )
 }
 
-export default Congrats
+export default Congrats;
