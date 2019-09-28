@@ -16,6 +16,8 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  box-shadow: 12px 0 11px -4px rgba(40, 73, 125, 0.5),
+    -12px 0 8px -4px rgba(40, 73, 125, 0.5);
 }
 
 .App-link {

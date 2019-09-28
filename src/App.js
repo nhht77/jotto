@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header container">
           <img src={logo} className="App-logo" alt="logo" />
           <Congrats success={this.state.success} />
           <GuessedWords guessedWords={this.state.guessedWords} />
