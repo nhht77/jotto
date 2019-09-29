@@ -16,7 +16,7 @@ const GuessedWords = props => {
       <span data-test="component-instruction">Guess a word</span>
     ) : (
       <div data-test="guessed-words">
-        <h3>Guessed Words</h3>
+        <h1>Jotto App</h1>
         <table className="table table-sm">
           <thead className="thead-light">
             <tr>
