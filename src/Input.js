@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 
 class Input extends Component {
   render() {
-    return <div></div>;
+    return <div><button></button></div>;
   }
 }
 
-export default connect({})(Input);
+const mapStateToProps = state => ({})
+
+export default connect(mapStateToProps)(Input);
