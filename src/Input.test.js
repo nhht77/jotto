@@ -15,23 +15,22 @@ const setup = (initState = {}) => {
 setup();
 
 describe('render', () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = setup({ success: false });
+  });
   describe('word has not been guessed', () => {
-    // let wrapper;
-    // beforeEach(() => {
-    // const initialState = { success: false };
-    // wrapper = setup(initialState);
-    // })
     test('renders component without error', () => {
-      // const component = findComponentByTestAttr(wrapper, 'component-input');
-      // expect(component.length).toBe(1);
+      const component = findComponentByTestAttr(wrapper, 'component-input');
+      expect(component.length).toBe(1);
     });
     test('renders input box', () => {
-      // const inputBox = findComponentByTestAttr(wrapper, 'input-box');
-      // expect(inputBox.length).toBe(1);
+      const inputBox = findComponentByTestAttr(wrapper, 'input-box');
+      expect(inputBox.length).toBe(1);
     });
     test('renders submit button', () => {
-      // const submitButton = findComponentByTestAttr(wrapper, 'submit-button');
-      // expect(submitButton.length).toBe(1);
+      const submitBtn = findComponentByTestAttr(wrapper, 'submit-button');
+      expect(submitBtn.length).toBe(1);
     });
   });
   describe('word has been guessed', () => {
