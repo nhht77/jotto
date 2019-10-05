@@ -1,1 +1,1 @@
-export const guessWord = guessWord => (dispatch, getState) => {};
+export const guessWord = guessWord => (dispatch, getState) => {dispatch({})};
