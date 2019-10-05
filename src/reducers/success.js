@@ -1,4 +1,4 @@
-import {CORRECT_GUESS} from '../actions/actionTypes'
+import { CORRECT_GUESS } from '../actions/actionTypes';
 
 /**
  * @function successReducer
@@ -6,12 +6,11 @@ import {CORRECT_GUESS} from '../actions/actionTypes'
  * @param {object} action - action to be reduced.
  * @returns {boolean} - new success state.
  */
-export default (state=false, action) => {
-    switch(action.type){
-        case CORRECT_GUESS:
-            return true
-        default:
-            return state;
-    }
-
-}
+export default (state = false, action) => {
+  switch (action.type) {
+    case CORRECT_GUESS:
+      return true;
+    default:
+      return state;
+  }
+};
