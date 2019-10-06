@@ -4,9 +4,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { middlewares } from '../src/store';
 
 export const storeFactory = (initState = {}) => {
-  const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore)
+  const createStoreWithMiddleware = applyMiddleware(...middlewares)(
+    createStore
+  );
   return createStoreWithMiddleware(rootReducer, initState);
-}
+};
 
 export const findComponentByTestAttr = (wrapper, val) =>
   wrapper.find(`[data-test="${val}"]`);
