@@ -1,3 +1,4 @@
+import moxios from 'moxios';
 import { CORRECT_GUESS } from './actionTypes';
 import { correctGuess } from './success';
 
@@ -6,5 +7,15 @@ describe('correctGuess', () => {
     expect(correctGuess()).toEqual({
       type: CORRECT_GUESS
     });
+  });
+});
+
+describe('secretWord', () => {
+  beforeEach(() => {
+    moxios.install();
+  });
+
+  afterEach(() => {
+    moxios.uninstall();
   });
 });
