@@ -1,7 +1,10 @@
+import { SECRET_WORD } from "../actions/actionTypes";
+
 export default (state = null, action) => {
-  // switch(action.type){
-  // default:
-  // return state;
-  // }
-  return state;
+  switch(action.type){
+     case  SECRET_WORD:
+       return action.payload
+    default:
+      return state;
+  }
 };
