@@ -1,6 +1,5 @@
 import { storeFactory } from '../test/testUtils';
 import { guessWord } from './actions/guessedWord';
-import guessWords from './reducers/guessedWords';
 
 describe('guessWord action dispatcher', () => {
   const secretWord = 'party';
@@ -36,7 +35,7 @@ describe('guessWord action dispatcher', () => {
         guessedWords: [
           {
             guessedWord: secretWord,
-            letterMatchCount: secretWord.length
+            letterMatchCount: 5
           }
         ]
       };
@@ -57,7 +56,7 @@ describe('guessWord action dispatcher', () => {
       const expectedState = {
         ...initialState,
         success: false,
-        guessWords: [
+        guessedWords: [
           ...guessedWords,
           {
             guessedWord: unsuccessfulGuess,
@@ -74,8 +73,8 @@ describe('guessWord action dispatcher', () => {
       const expectedState = {
         ...initialState,
         success: true,
-        guessWords: [
-          ...guessWords,
+        guessedWords: [
+          ...guessedWords,
           {
             guessedWord: secretWord,
             letterMatchCount: 5
